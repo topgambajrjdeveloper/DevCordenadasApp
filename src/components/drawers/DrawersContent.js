@@ -28,10 +28,7 @@ export function DrawersContent(props) {
                 <View style={styles.drawerContent}>
                     <View style={styles.userInfoSection}>
                         <View style={{ flexDirection: 'row', marginTop: 15 }}>
-                            <Avatar.Image
-                                source={require('../../assets/img/julifoto.png')}
-                                size={50}
-                            />
+                            <Avatar.Image source={require('../../assets/img/julifoto.png')} size={50} />
                             <View style={{ marginLeft: 15, flexDirection: 'column' }}>
                                 <Title style={styles.title}>DevCordenadas</Title>
                                 <Caption style={styles.caption}><Icon name="github-circle" />topgambajrjdeveloper</Caption>

@@ -1,23 +1,27 @@
-import React from 'react';
-import {View} from 'react-native';
-import {
-  useTheme,
-  Avatar,
-  Title,
-  Caption,
-  Paragraph,
-  Drawer,
-  Text,
-  TouchableRipple,
-  Switch
-} from 'react-native-paper';
+import React, {useEffect, useState} from 'react';
+import { View, Text } from 'react-native';
+
+import {map} from 'lodash'
+import { getStrapiApiProjects } from '../api/ApiStrapi';
 
 
 const Projects = () => {
+  const [project, setProject] = useState(null);
+  
+  useEffect(() => {
+    getStrapiApiProjects().then((response) => {
+      setProject(response);
+     });
+
+  }, [])
   
   return (
     <View>
-      <Text>Proyectos</Text>
+      {map(project, (data) => (
+        <Text>
+        Sobre mi
+      </Text>
+  ))}
     </View>
   );
 };
